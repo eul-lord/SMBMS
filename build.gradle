@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group 'com.eul98'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir:  'src/main/webapp/WEB-INF/lib', includes: ['*.jar'])
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compileOnly  group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+    compileOnly  group: 'javax.servlet.jsp', name: 'jsp-api', version: '2.2'
+}

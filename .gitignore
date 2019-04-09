@@ -1,3 +1,9 @@
+# idea  dir and file
+.idea
+*.iml
+build
+out
+
 # Compiled class file
 *.class
 
@@ -12,6 +18,7 @@
 
 # Package Files #
 *.jar
+!src/main/webapp/WEB-INF/lib/*
 *.war
 *.nar
 *.ear
